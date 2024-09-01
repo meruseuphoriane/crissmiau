@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crismiau - contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000f6;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgb(255, 255, 255);
+            margin-top: 60px;
+        }
+
+        .contact-logos {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-logos img {
+            max-width: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-logos img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            width: 400px;
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .contact-form label {
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: rgba(68, 86, 119, 0.7);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-self: center;
+        }
+
+        .contact-form button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        footer {
+            background-color: rgba(68, 86, 119, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: rgba(68, 86, 119, 0.7);
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>crismiau contacto</h1>
+        <nav>
+            <ul>
+                <li><a href="crismiau.html">inicio</a></li>
+                <li><a href="crismiau-albumes.html">álbumes</a></li>
+                <li><a href="crismiau-contacto.html">contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="contact-logos">
+        <a href="https://wa.me/0985306213" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/2062095_application_chat_communication_logo_whatsapp_icon.svg/2048px-2062095_application_chat_communication_logo_whatsapp_icon.svg.png" alt="WhatsApp">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="mailto:tu-correo-electronico">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1200px-Gmail_icon_%282020%29.svg.png" alt="Correo Electrónico">
+        </a>
+    </div>
+    
+    <div class="contact-form">
+        <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CRISMIAU. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const comentario = document.getElementById('comentario').value;
+
+            alert(`Se envió el comentario de ${nombre} ${apellido}: "${comentario}"`);
+
+            return false;
+        }
+    </script>
+</body>
+</html>

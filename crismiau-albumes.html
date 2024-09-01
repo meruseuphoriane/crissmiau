@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crismiau - álbumes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000cc;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.5);
+            margin-top: 60px;
+        }
+
+        main {
+            max-width: 1200px;
+            width: 90%;
+            background-color: rgba(129, 22, 22, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex: 1;
+        }
+
+        .album {
+            background-color: #f0f0f0;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .album:hover {
+            transform: translateY(-5px);
+        }
+
+        .album img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .album h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .songs {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+            min-height: 120px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            overflow-y: auto;
+        }
+
+        .songs li {
+            padding: 8px 0;
+            cursor: grab;
+            color: #ffffff;
+            font-size: 0.9em;
+            background-color: #000000;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .songs li:hover {
+            background-color: #c71111;
+        }
+
+        .song-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .song-list li {
+            margin-bottom: 5px;
+            background-color: #c71111;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: rgba(68, 86, 119, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: rgba(68, 86, 119, 0.7);
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>arte crismiau</h1>
+        <nav>
+            <ul>
+                <li><a href="crismiau.html">inicio</a></li>
+                <li><a href="crismiau-albumes.html">álbumes</a></li>
+                <li><a href="crismiau-contacto.html">contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="album" id="album1">
+            <img src="https://cdn.leonardo.ai/users/b62e01be-83be-4609-9af4-8600c80ec944/generations/4ee3d2d0-012f-4c97-a0b0-98a2dfae0471/Default_a_sad_black_haired_anime_woman_looking_in_the_mirror_2.jpg" alt="Álbum 1">
+            <h3>lolita</h3>
+            <ul class="songs">
+                <li draggable="true">why u love me?</li>
+                <li draggable="true">18</li>
+                <li draggable="true">i don't get old</li>
+            </ul>
+            <ul class="song-list"></ul>
+        </div>
+        
+        <div class="album" id="album2">
+            <img src="https://cdn.leonardo.ai/users/b62e01be-83be-4609-9af4-8600c80ec944/generations/ac048ac9-03ad-425a-8f23-59dc6e3dc21a/Default_a_boy_and_a_girl_with_long_hair_inside_a_read_heart_in_0.jpg" alt="Álbum 2">
+            <h3>he is mine only mine.</h3>
+            <ul class="songs">
+                <li draggable="true">i was the other woman</li>
+                <li draggable="true">2000</li>
+                <li draggable="true">u can fix me</li>
+            </ul>
+            <ul class="song-list"></ul>
+        </div>
+        
+        <div class="album" id="album3">
+            <img src="https://cdn.leonardo.ai/users/b62e01be-83be-4609-9af4-8600c80ec944/generations/05fb8212-4f0b-44b5-921e-d65fb2689d3e/Default_girl_with_very_long_hair_walking_through_a_cyberpunk_p_3.jpg" alt="Álbum 3">
+            <h3>hate her</h3>
+            <ul class="songs">
+                <li draggable="true">idontwannabeyouanymore</li>
+                <li draggable="true">pretty when u cry</li>
+                <li draggable="true">for? me</li>
+            </ul>
+            <ul class="song-list"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CRISMIAU.</p>
+    </footer>
+
+    <script>
+        const songs = document.querySelectorAll('.songs li');
+        let draggedItem = null;
+
+        songs.forEach(song => {
+            song.addEventListener('dragstart', function () {
+                draggedItem = song;
+                setTimeout(function () {
+                    song.style.display = 'none';
+                }, 0);
+            });
+
+            song.addEventListener('dragend', function () {
+                setTimeout(function () {
+                    draggedItem.style.display = 'block';
+                    draggedItem = null;
+                }, 0);
+            });
+        });
+
+        const albums = document.querySelectorAll('.album');
+
+        albums.forEach(album => {
+            album.addEventListener('dragover', function (e) {
+                e.preventDefault();
+            });
+
+            album.addEventListener('dragenter', function (e) {
+                e.preventDefault();
+                this.style.border = '2px dashed #aaa';
+            });
+
+            album.addEventListener('dragleave', function () {
+                this.style.border = 'none';
+            });
+
+            album.addEventListener('drop', function (e) {
+                e.preventDefault();
+                this.style.border = 'none';
+                const songsList = this.querySelector('.song-list');
+                const song = draggedItem.cloneNode(true);
+                song.style.display = 'block';
+                songsList.appendChild(song);
+            });
+        });
+    </script>
+</body>
+</html>
